@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+    <style>
+      .head1 {
+        color: blue;
+        font-size: 60px;
+      }
+      .paragraph {
+        color: green;
+        font-size: 20px;
+      }
+      #parent {
+        background-color: lightgray;
+        padding: 20px;
+      }
+      #child {
+        background-color: lightblue;
+        padding: 20px;
+      }
+      #grand-child {
+        background-color: lightgreen;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div>
+      <h1 id="heading" class="head">
+        Hello <span style="display: none">Hidden text </span>World
+      </h1>
+      <h1 id="heading1" class="head head1">
+        <span>Hi</span>
+        Hello1
+      </h1>
+      <h1 id="heading2" class="head">Hello2</h1>
+
+      <input type="text" id="input" placeholder="Type something..." />
+
+      <button id="btn">Click me</button>
+    </div> -->
+    <!-- <div id="parent">
+      Parent
+      <div id="child">
+        Child
+        <div id="grand-child">Grand child</div>
+      </div>
+    </div> -->
+
+    <!-- <ul>
+      <li id="item-1">Item 1</li>
+      <li id="item-2">Item 2</li>
+      <li id="item-3">Item 3</li>
+    </ul> -->
+
+    <form id="myForm" action="#" method="post">
+      <input
+        type="text"
+        id="input"
+        value="Srinivas"
+        placeholder="Type something..."
+      />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+      // 1. get the element by id
+      // const h1 = document.getElementById("heading");
+      // console.log(h1);
+      // 2. get the element by tag name
+      // const h1 = document.getElementsByTagName("h1")[0];
+      // console.log(h1);
+      // 3. get the element by class name
+      // const headingEle = document.getElementsByClassName("head");
+      // console.log(headingEle);
+      //   4. query selector
+      // const h1 = document.querySelector(".head");
+      // console.log(h1);
+      // const h1 = document.querySelectorAll(".head");
+      // console.log(h1);
+      // h1.style.color = "red";
+      // h1.style.fontSize = "50px";
+      // h1.style.backgroundColor = "yellow";
+      // h1.innerText = "Hello, World!";
+      // console.log(h1.innerText);
+      // console.log(h1.textContent);
+      // console.log(h1.innerHTML);
+
+      // h1.innerHTML = "<span>Hidden text </span>";
+
+      // const h1 = document.getElementById("heading1");
+      // // h1.classList.add("head1");
+      // // h1.classList.remove("head1");
+      // // h1.classList.toggle("head1");
+
+      // console.log(h1.getAttribute("id"));
+      // h1.setAttribute("class", "haaaaa");
+
+      // const pElement = document.createElement("p");
+      // console.log(pElement);
+      // pElement.innerText = "This is a new paragraph.";
+      // pElement.setAttribute("class", "paragraph");
+
+      // document.body.appendChild(pElement);
+      // console.log(pElement);
+
+      // const container = document.querySelector("div");
+      // container.prepend(pElement);
+      //   console.log(h1);
+
+      // const btn = document.getElementById("input");
+      // btn.onclick = function () {
+      //   alert("Button clicked!");
+      // };
+      // btn.addEventListener("keyup", function (e) {
+      //   if (e.key === "Enter") {
+      //     alert("You pressed Enter!");
+      //   }
+      // });
+
+      // const parent = document.getElementById("parent");
+      // const child = document.getElementById("child");
+      // const grandChild = document.getElementById("grand-child");
+
+      // parent.addEventListener("click", function () {
+      //   console.log("Parent clicked!");
+      // });
+
+      // child.addEventListener("click", function (e) {
+      //   console.log("Child clicked!");
+      //   e.stopPropagation();
+      // });
+
+      // grandChild.addEventListener("click", function (e) {
+      //   console.log("Grand child clicked!");
+      //   e.stopPropagation();
+      // });
+
+      // const container = document.getElementsByTagName("ul")[0];
+
+      // container.addEventListener("click", function (e) {
+      //   if (e.target.tagName === "LI") {
+      //     console.log("List item clicked: " + e.target.innerText);
+      //   }
+      // });
+
+      // JSON
+
+      // const obj = {
+      //   name: "John",
+      //   age: 30,
+      //   city: "New York",
+      // };
+
+      // const jsonString = JSON.stringify(obj);
+      // console.log(jsonString);
+      // const parsedObj = JSON.parse(jsonString);
+      // console.log(parsedObj);
+
+      // const inputElt = document.getElementById("input");
+
+      // inputElt.addEventListener("change", function (e) {
+      //   alert("Input changed: " + e.target.value);
+      //   console.log(e.target.value);
+      // });
+      // console.log(inputElt.value);
+
+      const form = document.getElementById("myForm");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const inputValue = document.getElementById("input").value;
+        alert("Form submitted with input: " + inputValue);
+        console.log(inputValue);
+      });
+    </script>
+  </body>
+</html>

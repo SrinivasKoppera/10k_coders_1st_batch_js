@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: lightblue;
+      height: 100vh;
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      /* animation: move 2s ease-in-out forwards alternate; */
+      /* animation-name: move;
+      animation-duration: 5s;
+      animation-timing-function: ease-in-out;
+      animation-delay: 1s;
+      animation-iteration-count: 2; */
+      /* transition: */
+      /* width 2s ease-in-out,
+        height 2s ease-in-out; */
+      transition: all 2s ease-in-out;
+      animation: move 5s ease-in-out infinite reverse;
+    }
+
+    .box-1:hover {
+      /* width: 200px;
+      height: 200px; */
+      transform: translate(200px, 200px);
+      /* transform: rotate3d(1, 1, 1, 360deg); */
+    }
+
+    @keyframes move {
+      0% {
+        background-color: red;
+        /* transform: translate(0, 0); */
+      }
+      25% {
+        background-color: blue;
+        transform: translate(200px, 0);
+      }
+      50% {
+        background-color: green;
+        transform: translate(200px, 200px);
+      }
+      75% {
+        background-color: yellow;
+        transform: translate(0, 200px);
+      }
+      100% {
+        background-color: red;
+        transform: translate(0, 0);
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="box box-1">Box</div>
+    </div>
+  </body>
+</html>

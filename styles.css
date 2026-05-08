@@ -1,0 +1,48 @@
+/* * {
+  background-color: yellow;
+} */
+
+/* p {
+  color: green;
+} */
+
+.paragraph {
+  color: salmon;
+}
+#para {
+  color: blue;
+}
+input[type="text"] {
+  color: red;
+}
+
+/* combination of selectors: */
+/* 1. Descendant selector: */
+
+.parent p {
+  color: purple;
+}
+
+/* 2. Child selector: */
+
+.child-1 > p {
+  color: rebeccapurple;
+}
+
+/* 3. Adjacent sibling selector: */
+.oneee + h1 {
+  color: red;
+  background-color: black;
+}
+.one + h1 {
+  color: green;
+}
+
+/* 4. General sibling selector: */
+.one ~ h1 {
+  color: blue;
+}
+
+h1:not(.ele) {
+  color: orange;
+}

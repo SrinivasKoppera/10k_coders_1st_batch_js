@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Functions</h1>
+    <script>
+      // 1. Functions Declaration
+      // greet();
+      // function greet() {
+      //   console.log("Hello, welcome to JavaScript functions!");
+      // }
+
+      // greet(); // Call the function to see the greeting message
+      // greet(); // Call the function again to see the greeting message
+      // greet(); // Call the function again to see the greeting message
+      // greet(); // Call the function again to see the greeting message
+
+      // 2. Function Expression
+      //   let add = function (a, b) {
+
+      //     const sum = a + b;
+      //   };
+
+      //   console.log(add(5, 3)); // Output: 8
+
+      // 3. Arrow Function
+      // let multiply = (a, b) => a * b;
+
+      //   4. ananomyous function
+
+      //   setTimeout(function () {
+      //     console.log("This is an anonymous function executed after 2 seconds.");
+      //   }, 2000);
+
+      //   5. IIFE (Immediately Invoked Function Expression)
+      // (function () {
+      //   console.log("This is an IIFE, executed immediately!");
+      // })();
+      //////////////////////////////
+
+      //   const addition = function (a, b) {
+      //     console.log("a :", a, "b :", b);
+      //     const sum = a + b;
+      //     return sum;
+      //   };
+
+      // const addition = (a = 10, b = 5) => {
+      //   const sum = a + b;
+      //   return sum;
+      // };
+
+      // const result = addition(20); // Call the function to see the result
+      // console.log(result);
+
+      // function calculateArea(a, b) {
+      //   const sum = a + b;
+      //   console.log(sum);
+      //   return sum;
+      // }
+
+      // const result4 = (a, b) => {
+      //   const sum = a + b;
+      //   const multiplication = a * b;
+      //   return { sum, multiplication };
+      // };
+      // console.log(result4(5, 10));
+
+      // calculateArea(5, 10);
+
+      // function message(message = "gtttt") {
+      //   return function name(name) {
+      //     return `${message}, ${name}!`;
+      //   };
+      // }
+
+      // const greetMessage = message("Hello");
+      // console.log(greetMessage("Alice")); // Output: Hello, Alice!
+
+      // 6. Callback Function
+
+      // const greet = function (msg) {
+      //   console.log(msg);
+      // };
+
+      // const printGreeting = function (callback) {
+      //   // console.log(callback);
+      //   const greetingMessage = "Hello, welcome to JavaScript functions!";
+      //   callback(greetingMessage);
+      // };
+
+      // printGreeting(function (message) {
+      //   console.log("Callback function executed with message:", message);
+      // });
+
+      // const greet = () => {
+      //   let a = 10;
+      //   console.log(a);
+      // };
+
+      // greet();
+      // console.log(a);
+      // 7. Closures
+
+      // function outer() {
+      //   let count = 0;
+      //   return function inner() {
+      //     count++;
+      //     console.log(count);
+      //   };
+      // }
+
+      // // console.log(count);
+
+      // const counter = outer();
+      // counter();
+      // counter();
+      // counter();
+
+      // const arr = [1, 2, 3, 4, 5];
+      // console.log(arr[1]);
+
+      // const str = "Hello, World!";
+      // console.log(str[7]);
+
+      // const obj = {
+      //   name: "Alice",
+      //   age: 30,
+      // };
+
+      // console.log(obj["name"]);
+
+      // const createAccount = function () {
+      //   let balance = 0;
+      //   return {
+      //     deposite(amount) {
+      //       balance = balance + amount;
+      //       console.log(`Balance after deposite: ${balance}`);
+      //     },
+      //     withdraw(amount) {
+      //       balance -= amount;
+      //       console.log(`Balance after withdraw: ${balance}`);
+      //     },
+      //     getBalance() {
+      //       console.log(`Current balance: ${balance}`);
+      //     },
+      //   };
+      // };
+
+      // const myAccount = createAccount();
+
+      // console.log(myAccount.deposite(100));
+      // console.log(myAccount.withdraw(30));
+      // console.log(myAccount.getBalance());
+
+      // 8. Recursion functions
+
+      // const factorial = function (n) {
+      //   if (n === 0 || n === 1) {
+      //     return 1;
+      //   }
+      //   return n * factorial(n - 1);
+      // };
+
+      // 5 *  5 - 1 = 4
+      // 5 * 4 * 4 - 1 = 3
+      // 5 * 4 * 3 * 3 - 1 = 2
+      // 5 * 4 * 3 * 2 * 2 - 1 = 1
+
+      // 1 * 2 * 3 * 4 * 5 = 120
+
+      // console.log(factorial(5)); // Output: 120
+
+      // let name = "Alice";
+
+      // function greet() {
+      //   console.log("Hello, " + name + "!");
+      // }
+
+      // let productName = "Laptop";
+      // let price = 999.99;
+      // let quantity = 5;
+      // let brand = "TechBrand";
+
+      // let product = {
+      //   name: "Laptop",
+      //   price: 999.99,
+      //   quantity: 5,
+      //   brand: "TechBrand",
+      // };
+
+      // let greet = function () {
+      //   console.log("Hello, " + name + "!");
+      // };
+
+      // let person = {
+      //   name: "Bob",
+      //   greet: () => {
+      //     console.log(this);
+      //   },
+
+      //   "first Name": "Bob",
+      //   "last Name": "Smith",
+      // };
+
+      // let arr = [];
+
+      // console.log(person.name);
+      // console.log(person["first Name"]);
+
+      // for (let key in person) {
+      //   console.log(person[key]);
+      // }
+
+      // person.age = 30; // Adding a new property to the person object
+
+      // person.name = "Charlie"; // Modifying the existing name property
+
+      // delete person["last Name"]; // Deleting the last Name property from the person object
+
+      // console.log(person);
+      // // console.log("This is This keyword data:", this);
+
+      // console.log(Object.keys(person));
+      // console.log(Object.values(person));
+      // console.log(Object.entries(person));
+
+      // const student = {
+      //   name: "Alice",
+      //   age: 20,
+      //   grade: "A",
+      // };
+
+      // Object.freeze(student); // Freezing the student object to prevent further modifications
+      // Object.seal(student); // Sealing the student object to prevent adding or deleting properties
+      // student.grade = "B"; // Modifying the existing grade property
+      // delete student.age; // Attempting to delete the age property (will not work due to Object.seal)
+      // console.log(student);
+
+      let student = {
+        name: "Alice",
+        age: 20,
+        grade: "A",
+      };
+
+      let car = {
+        brand: "Toyota",
+        model: "Camry",
+        year: 2020,
+      };
+
+      let combinedObject = { ...student, ...car }; // Merging student and car objects using spread operator
+
+      console.log(combinedObject);
+
+      // let student2 = student;
+
+      // student2.city = "New York"; // Adding a new property to student2
+
+      // console.log(student2);
+      // console.log(student);
+
+      // let a = 10;
+      // let b = a;
+      // b = 20;
+      // console.log(b);
+      // console.log(a);
+    </script>
+  </body>
+</html>

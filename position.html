@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .main-container {
+        background-color: lightseagreen;
+        width: 800px;
+        height: 800px;
+        /* position: relative; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .container {
+        background-color: lightgreen;
+        position: relative;
+        width: 600px;
+        height: 600px;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+      }
+      .box-1 {
+        background-color: rosybrown;
+        /* position: absolute; */
+      }
+      .box-2 {
+        background-color: rgb(51, 32, 178);
+        position: absolute;
+        top: 0;
+        left: 100px;
+      }
+      .box-3 {
+        background-color: limegreen;
+        position: absolute;
+        top: 0;
+        left: 200px;
+      }
+      .box-4 {
+        background-color: maroon;
+        position: absolute;
+        top: 0;
+        left: 300px;
+      }
+      .box-5 {
+        background-color: rgb(122, 158, 39);
+        position: absolute;
+        top: 0;
+        left: 400px;
+      }
+      .box-6 {
+        background-color: rgb(17, 20, 79);
+        position: absolute;
+        top: 0;
+        left: 500px;
+      }
+      .box-7 {
+        background-color: rgb(83, 20, 71);
+        position: absolute;
+        top: 100px;
+        left: 0;
+      }
+      .box-8 {
+        background-color: rgb(31, 169, 89);
+        position: absolute;
+        top: 100px;
+        left: 100px;
+      }
+      .box-9 {
+        background-color: rgb(132, 128, 27);
+        position: absolute;
+        top: 100px;
+        left: 200px;
+      }
+      .box-10 {
+        background-color: rgb(131, 17, 48);
+        position: absolute;
+        top: 100px;
+        left: 300px;
+      }
+      .box-11 {
+        background-color: rgb(42, 10, 10);
+        position: absolute;
+        top: 100px;
+        left: 400px;
+      }
+      .box-12 {
+        background-color: rgb(37, 223, 8);
+        position: absolute;
+        top: 100px;
+        left: 500px;
+      }
+      .box-13 {
+        background-color: rgb(66, 57, 183);
+        position: absolute;
+        top: 200px;
+        left: 0;
+      }
+      .box-14 {
+        background-color: rgba(99, 57, 57, 0.344);
+        position: absolute;
+        top: 200px;
+        left: 100px;
+      }
+      .box-15 {
+        background-color: rgb(219, 234, 10);
+        position: absolute;
+        top: 200px;
+        left: 200px;
+      }
+      .box-16 {
+        background-color: rgb(54, 63, 163);
+        position: absolute;
+        top: 200px;
+        left: 300px;
+      }
+      .box-17 {
+        background-color: rgb(10, 97, 177);
+        position: absolute;
+        top: 200px;
+        left: 400px;
+      }
+      .box-18 {
+        background-color: rgb(142, 16, 100);
+        position: absolute;
+        top: 200px;
+        left: 500px;
+      }
+      .box-19 {
+        background-color: rgb(21, 115, 120);
+        position: absolute;
+        top: 300px;
+        left: 0;
+      }
+      .box-20 {
+        background-color: rgb(17, 20, 79);
+        position: absolute;
+        top: 300px;
+        left: 100px;
+      }
+      .box-21 {
+        background-color: rgb(83, 20, 71);
+        position: absolute;
+        top: 300px;
+        left: 200px;
+      }
+      .box-22 {
+        background-color: rgb(31, 169, 89);
+        position: absolute;
+        top: 300px;
+        left: 300px;
+      }
+      .box-23 {
+        background-color: rgb(132, 128, 27);
+        position: absolute;
+        top: 300px;
+        left: 400px;
+      }
+      .box-24 {
+        background-color: rgb(131, 17, 48);
+        position: absolute;
+        top: 300px;
+        left: 500px;
+      }
+      .box-25 {
+        background-color: rgb(42, 10, 10);
+        position: absolute;
+        top: 300px;
+        left: 500px;
+      }
+      .box-26 {
+        background-color: rgb(37, 223, 8);
+        position: absolute;
+        top: 400px;
+        left: 0;
+      }
+      .box-27 {
+        background-color: rgb(66, 57, 183);
+        position: absolute;
+        top: 400px;
+        left: 100px;
+      }
+      .box-28 {
+        background-color: rgba(99, 57, 57, 0.344);
+        position: absolute;
+        top: 400px;
+        left: 200px;
+      }
+      .box-29 {
+        background-color: rgb(219, 234, 10);
+        position: absolute;
+        top: 400px;
+        left: 300px;
+      }
+      .box-30 {
+        background-color: rgb(54, 63, 163);
+        position: absolute;
+        top: 400px;
+        left: 400px;
+      }
+      .box-31 {
+        background-color: rgb(10, 97, 177);
+        position: absolute;
+        top: 400px;
+        left: 500px;
+      }
+      .box-32 {
+        background-color: rgb(142, 16, 100);
+        position: absolute;
+        top: 500px;
+        left: 0;
+      }
+      .box-33 {
+        background-color: rgb(21, 115, 120);
+        position: absolute;
+        top: 500px;
+        left: 100px;
+      }
+      .box-34 {
+        background-color: rgb(17, 20, 79);
+        position: absolute;
+        top: 500px;
+        left: 200px;
+      }
+      .box-35 {
+        background-color: rgb(83, 20, 71);
+        position: absolute;
+        top: 500px;
+        left: 300px;
+      }
+      .box-36 {
+        background-color: rgb(31, 169, 89);
+        position: absolute;
+        top: 500px;
+        left: 400px;
+      }
+      .box-37 {
+        background-color: rgb(132, 128, 27);
+        position: absolute;
+        top: 500px;
+        left: 500px;
+      }
+      p {
+        font-size: 32px;
+      }
+      .header {
+        background-color: lightseagreen;
+        height: 60px;
+        position: sticky;
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Position</h1>
+    <div class="main-container">
+      <div class="container">
+        <div class="box box-1">BOX 1</div>
+        <div class="box box-2">BOX 2</div>
+        <div class="box box-3">BOX 3</div>
+        <div class="box box-4">BOX 4</div>
+        <div class="box box-5">BOX 5</div>
+        <div class="box box-6">BOX 6</div>
+        <div class="box box-7">BOX 7</div>
+        <div class="box box-8">BOX 8</div>
+        <div class="box box-9">BOX 9</div>
+        <div class="box box-10">BOX 10</div>
+        <div class="box box-11">BOX 11</div>
+        <div class="box box-12">BOX 12</div>
+        <div class="box box-13">BOX 13</div>
+        <div class="box box-14">BOX 14</div>
+        <div class="box box-15">BOX 15</div>
+        <div class="box box-16">BOX 16</div>
+        <div class="box box-17">BOX 17</div>
+        <div class="box box-18">BOX 18</div>
+        <div class="box box-19">BOX 19</div>
+        <div class="box box-20">BOX 20</div>
+        <div class="box box-21">BOX 21</div>
+        <div class="box box-22">BOX 22</div>
+        <div class="box box-23">BOX 23</div>
+        <div class="box box-24">BOX 24</div>
+        <div class="box box-25">BOX 25</div>
+        <div class="box box-26">BOX 26</div>
+        <div class="box box-27">BOX 27</div>
+        <div class="box box-28">BOX 28</div>
+        <div class="box box-29">BOX 29</div>
+        <div class="box box-30">BOX 30</div>
+        <div class="box box-31">BOX 31</div>
+        <div class="box box-32">BOX 32</div>
+        <div class="box box-33">BOX 33</div>
+        <div class="box box-34">BOX 34</div>
+        <div class="box box-35">BOX 35</div>
+        <div class="box box-36">BOX 36</div>
+        <div class="box box-37">BOX 37</div>
+      </div>
+    </div>
+
+    <!-- <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+        repellendus ratione reiciendis eligendi dolore, ab cum iste quidem
+        distinctio fugiat ad fugit cumque ipsa sequi repellat cupiditate.
+        Provident obcaecati sequi rem. Eveniet eaque modi ipsum quam vel
+        veritatis dicta dolor ut blanditiis voluptas nisi ullam, quos cum odit
+        aliquid accusamus harum. Eligendi iusto totam quam fugit reprehenderit
+        temporibus nam voluptatibus. Maiores, odio nemo a laborum sint similique
+        pariatur ipsa, deserunt voluptatibus dolore, asperiores provident
+        facilis sequi natus sed? Aspernatur natus illo ab. Earum molestiae quo
+        deleniti atque totam vero alias fuga quaerat, dolor eos adipisci?
+        Similique ipsam corrupti iste nostrum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+        repellendus ratione reiciendis eligendi dolore, ab cum iste quidem
+        distinctio fugiat ad fugit cumque ipsa sequi repellat cupiditate.
+        Provident obcaecati sequi rem. Eveniet eaque modi ipsum quam vel
+        veritatis dicta dolor ut blanditiis voluptas nisi ullam, quos cum odit
+        aliquid accusamus harum. Eligendi iusto totam quam fugit reprehenderit
+        temporibus nam voluptatibus. Maiores, odio nemo a laborum sint similique
+        pariatur ipsa, deserunt voluptatibus dolore, asperiores provident
+        facilis sequi natus sed? Aspernatur natus illo ab. Earum molestiae quo
+        deleniti atque totam vero alias fuga quaerat, dolor eos adipisci?
+        Similique ipsam corrupti iste nostrum.
+      </p>
+      <div class="header">Header</div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dolor
+        velit necessitatibus assumenda nostrum libero eveniet explicabo veniam
+        vero! Ipsum, voluptates mollitia repellat totam dignissimos optio ipsa
+        similique necessitatibus fugit, doloremque ullam recusandae dolorum
+        nemo, neque laboriosam deleniti corporis ea porro! Commodi reprehenderit
+        aspernatur aut, sunt sint nulla, cum laboriosam repudiandae veniam ea
+        numquam illo mollitia dolorum obcaecati molestiae inventore quo quaerat
+        saepe nihil ratione minus blanditiis. Qui dolore pariatur magnam,
+        delectus esse facere ab aperiam nemo, enim est, vitae tempore vel iste
+        illum laboriosam cum! Molestiae nihil, voluptates quam laudantium
+        veritatis, accusantium error animi repellat numquam iure ipsa dolor.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dolor
+        velit necessitatibus assumenda nostrum libero eveniet explicabo veniam
+        vero! Ipsum, voluptates mollitia repellat totam dignissimos optio ipsa
+        similique necessitatibus fugit, doloremque ullam recusandae dolorum
+        nemo, neque laboriosam deleniti corporis ea porro! Commodi reprehenderit
+        aspernatur aut, sunt sint nulla, cum laboriosam repudiandae veniam ea
+        numquam illo mollitia dolorum obcaecati molestiae inventore quo quaerat
+        saepe nihil ratione minus blanditiis. Qui dolore pariatur magnam,
+        delectus esse facere ab aperiam nemo, enim est, vitae tempore vel iste
+        illum laboriosam cum! Molestiae nihil, voluptates quam laudantium
+        veritatis, accusantium error animi repellat numquam iure ipsa dolor.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dolor
+        velit necessitatibus assumenda nostrum libero eveniet explicabo veniam
+        vero! Ipsum, voluptates mollitia repellat totam dignissimos optio ipsa
+        similique necessitatibus fugit, doloremque ullam recusandae dolorum
+        nemo, neque laboriosam deleniti corporis ea porro! Commodi reprehenderit
+        aspernatur aut, sunt sint nulla, cum laboriosam repudiandae veniam ea
+        numquam illo mollitia dolorum obcaecati molestiae inventore quo quaerat
+        saepe nihil ratione minus blanditiis. Qui dolore pariatur magnam,
+        delectus esse facere ab aperiam nemo, enim est, vitae tempore vel iste
+        illum laboriosam cum! Molestiae nihil, voluptates quam laudantium
+        veritatis, accusantium error animi repellat numquam iure ipsa dolor.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dolor
+        velit necessitatibus assumenda nostrum libero eveniet explicabo veniam
+        vero! Ipsum, voluptates mollitia repellat totam dignissimos optio ipsa
+        similique necessitatibus fugit, doloremque ullam recusandae dolorum
+        nemo, neque laboriosam deleniti corporis ea porro! Commodi reprehenderit
+        aspernatur aut, sunt sint nulla, cum laboriosam repudiandae veniam ea
+        numquam illo mollitia dolorum obcaecati molestiae inventore quo quaerat
+        saepe nihil ratione minus blanditiis. Qui dolore pariatur magnam,
+        delectus esse facere ab aperiam nemo, enim est, vitae tempore vel iste
+        illum laboriosam cum! Molestiae nihil, voluptates quam laudantium
+        veritatis, accusantium error animi repellat numquam iure ipsa dolor.
+      </p>
+    </div> -->
+  </body>
+</html>

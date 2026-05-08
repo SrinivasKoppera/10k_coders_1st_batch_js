@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problem</title>
+  </head>
+  <body>
+    <h1>Problems</h1>
+    <script>
+      // 1. Calculate total bill including 18% GST for a product priced at ₹750.
+
+      let price = 750;
+      let gst = price * (18 / 100); // Calculate GST
+      console.log("GST Amount: ₹" + gst); // Output GST amount
+      console.log("Total Bill: ₹" + (price + gst)); // Output total bill including GST
+
+      //   2. Find the remainder when 987 is divided by 10 (useful for last digit logic).
+
+      let number = 987;
+      let remainder = number % 10; // Calculate remainder
+      console.log(remainder);
+
+      //   3. Convert minutes into hours and remaining minutes using operators.
+
+      let totalMinutes = 135;
+      let hours = Math.floor(totalMinutes / 60); // Calculate hours
+      let minutes = totalMinutes % 60; // Calculate remaining minutes
+      console.log(hours + " hours and " + minutes + " minutes");
+
+      //   4. Swap two numbers without using a third variable.
+
+      let a = 5,
+        b = 10;
+      [a, b] = [b, a]; // Swap using array destructuring
+      console.log("After swapping: a = " + a + ", b = " + b);
+
+      //   5. Check if a number is even or odd using modulus operator.
+      let num = 7;
+      if (num % 2 === 0) {
+        console.log(num + " is even.");
+      } else {
+        console.log(num + " is odd.");
+      }
+
+      const result = num % 2 === 0 ? "even" : "odd"; // Using ternary operator
+      console.log(num + " is " + result + ".");
+
+      //   6. Calculate compound interest for 2 years using arithmetic operators.
+
+      let principal = 1000;
+      let rate = 10; // Annual interest rate in percentage
+      let time = 2; // Time in years
+
+      let amount = principal * Math.pow(1 + rate / 100, time); // Calculate compound interest
+      console.log(
+        "Compound Interest after " + time + " years: ₹" + (amount - principal),
+      ); // Output compound interest
+
+      //   7. A user earns ₹500/day. Calculate total salary for N days using assignment operators.
+
+      let dailyEarnings = 500;
+      let days = 10; // Number of days
+
+      let totalSalary = dailyEarnings * days; // Calculate total salary
+      console.log("Total Salary for " + days + " days: ₹" + totalSalary); // Output total salary
+
+      //   8. Compare two numbers and print which is greater using comparison operators.
+      let num1 = 35;
+      let num2 = 20;
+
+      const result1 = num1 > num2 ? num1 : num2; // Using ternary operator to find greater number
+      console.log("Greater number is: " + result1);
+
+      //   9. Check if a number lies between 10 and 50 using logical operators.
+
+      let numberToCheck = 125;
+      if (numberToCheck > 10 && numberToCheck < 50) {
+        console.log(numberToCheck + " lies between 10 and 50.");
+      } else {
+        console.log(numberToCheck + " does not lie between 10 and 50.");
+      }
+
+      //   10. Use the ternary operator to check if a user is eligible to vote (age ≥ 18).
+      let age = 17;
+      let region = "India"; // Assuming voting eligibility is based on age in India
+
+      const isEligibleToVote =
+        region === "India"
+          ? age >= 18
+            ? "You are eligible to vote."
+            : "You are not eligible to vote. You need to be at least 18 years old."
+          : "Not eligible to vote"; // Using ternary operator to check voting eligibility
+
+      // 11. Check if a number is positive, negative, or zero.
+      let numberToCheck2 = 100;
+      if (numberToCheck2 > 0) {
+        console.log(numberToCheck2 + " is positive.");
+      } else if (numberToCheck2 < 0) {
+        console.log(numberToCheck2 + " is negative.");
+      } else {
+        console.log(numberToCheck2 + " is zero.");
+      }
+
+      //   12. Check whether a person is eligible for a driving license (age ≥ 18).
+      let personAge = 10;
+      const isEligibleForLicense =
+        personAge >= 18
+          ? "You are eligible for a driving license."
+          : "You are not eligible for a driving license. You need to be at least 18 years old."; // Using ternary operator to check driving license eligibility
+
+      console.log(isEligibleForLicense);
+
+      // 13. Find the largest of two numbers.
+      let num3 = 35;
+      let num4 = 20;
+
+      const result2 = num3 > num4 ? num3 : num4; // Using ternary operator to find greater number
+      console.log("Greater number is: " + result2);
+
+      //   14. Check if a number is divisible by both 3 and 5.
+      let numberToCheck3 = 10;
+
+      if (numberToCheck3 % 3 === 0 && numberToCheck3 % 5 === 0) {
+        console.log(numberToCheck3 + " is divisible by both 3 and 5.");
+      } else {
+        console.log(numberToCheck3 + " is not divisible by both 3 and 5.");
+      }
+
+      //   15. Assign grades based on marks:
+      //   90+ → A
+      //   75–89 → B
+      //   50–74 → C
+      //   <50 → Fail
+
+      let marks = 85;
+
+      if (marks >= 90) {
+        console.log("Grade: A");
+      } else if (marks >= 75) {
+        console.log("Grade: B");
+      } else if (marks >= 50) {
+        console.log("Grade: C");
+      } else {
+        console.log("Grade: Fail");
+      }
+
+      //   16. Check if a year is a leap year.
+      let year = 1900;
+
+      if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+        console.log(year + " is a leap year.");
+      } else {
+        console.log(year + " is not a leap year.");
+      }
+
+      //   17. Build a simple calculator using if-else (add, subtract, multiply, divide).
+
+      let numA = 10;
+      let numB = 5;
+      let operator = "+"; // Change this to +, -, *, or / for different operations
+      if (operator === "+") {
+        console.log(numA + " + " + numB + " = " + (numA + numB));
+      } else if (operator === "-") {
+        console.log(numA + " - " + numB + " = " + (numA - numB));
+      } else if (operator === "*") {
+        console.log(numA + " * " + numB + " = " + numA * numB);
+      } else if (operator === "/") {
+        if (numB !== 0) {
+          console.log(numA + " / " + numB + " = " + numA / numB);
+        } else {
+          console.log("Division by zero is not allowed.");
+        }
+      } else {
+        console.log("Invalid operator. Please use +, -, *, or /.");
+      }
+
+      //   18. Check whether a character is a vowel or consonant.
+      let char = "Z";
+      if (
+        char === "A" ||
+        char === "E" ||
+        char === "I" ||
+        char === "O" ||
+        char === "U" ||
+        char === "a" ||
+        char === "e" ||
+        char === "i" ||
+        char === "o" ||
+        char === "u"
+      ) {
+        console.log(char + " is a vowel.");
+      } else {
+        console.log(char + " is a consonant.");
+      }
+
+      //   19. Determine if a number is a 3-digit number.
+      let numberToCheck4 = 123456;
+      if (numberToCheck4 >= 100 && numberToCheck4 <= 999) {
+        console.log(numberToCheck4 + " is a 3-digit number.");
+      } else {
+        console.log(numberToCheck4 + " is not a 3-digit number.");
+      }
+
+      //   20 . Check if a person gets a discount:
+      //   Age > 60 OR purchase > ₹5000
+      let customerAge = 45;
+      let purchaseAmount = 3000;
+
+      if (customerAge > 60 || purchaseAmount > 5000) {
+        console.log("Customer gets a discount.");
+      } else {
+        console.log("Customer does not get a discount.");
+      }
+
+      //   21. Print numbers from 1 to 50 using a loop.
+      //   for (let i = 1; i <= 50; i++) {
+      //     console.log(i);
+      //   }
+
+      //   22. Print even numbers between 1 and 100.
+
+      //   for (let i = 1; i <= 100; i++) {
+      //     if (i % 2 === 0) {
+      //       console.log(i);
+      //     }
+      //   }
+
+      //   23. Find the sum of first 20 natural numbers.
+      //   let sum = 0;
+      //   for (let i = 1; i <= 20; i++) {
+      //     sum += i;
+      //     console.log("Current sum after adding " + i + ": " + sum);
+      //   }
+      //   console.log("Sum of first 20 natural numbers is: " + sum);
+
+      //   24. Print multiplication table of a given number.
+      //   let numberForTable = 5;
+      //   for (let i = 1; i <= 10; i++) {
+      //     console.log(numberForTable + " x " + i + " = " + numberForTable * i);
+      //   }
+
+      //   25. Reverse a number (e.g., 123 → 321).
+      let numberToReverse = 123;
+      let reversedNumber = 0;
+
+      while (numberToReverse > 0) {
+        let lastDigit = numberToReverse % 10; // Get the last digit - 123 % 10 = 3, then 12 % 10 = 2, then 1 % 10 = 1
+        reversedNumber = reversedNumber * 10 + lastDigit; // Append the last digit to the reversed number - 0 * 10 + 3 = 3, 3*10 + 2 = 32, 32*10 + 1 = 321
+        numberToReverse = Math.floor(numberToReverse / 10); // Remove the last digit from the original number - 123 / 10 = 12.3 → 12, 12 / 10 = 1.2 → 1, 1 / 10 = 0.1 → 0
+      }
+
+      //   26.Count number of digits in a number.
+      let numberToCount = 0;
+      let digitCount = 0;
+
+      if (numberToCount === 0) {
+        digitCount = 1; // If the number is 0, it has 1 digit
+      } else {
+        while (numberToCount > 0) {
+          numberToCount = Math.floor(numberToCount / 10); // Remove the last digit - 12345 / 10 = 1234.5 → 1234, 1234 / 10 = 123.4 → 123, 123 / 10 = 12.3 → 12, 12 / 10 = 1.2 → 1, 1 / 10 = 0.1 → 0
+          digitCount++; // Increment the digit count - 0 + 1 = 1, 1 + 1 = 2, 2 + 1 = 3, 3 + 1 = 4, 4 + 1 = 5
+        }
+      }
+      console.log("Number of digits: " + digitCount);
+    </script>
+  </body>
+</html>

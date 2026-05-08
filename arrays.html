@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Arrays in JavaScript</h1>
+    <script>
+      //   const a = [1, 2, 3, 4, 5, 2, 3];
+      //   console.log(a[4]);
+      //   1. Push - adds an element to the end of the array
+
+      //   a.push(6);
+      //   console.log(a);
+
+      //   2. Pop - removes the last element from the array
+      //   const removedItem = a.pop();
+      //   console.log(a);
+      //   console.log(removedItem);
+
+      //   3. Shift - removes the first element from the array
+      //   a.shift();
+      //   console.log(a);
+
+      //   4. Unshift - adds an element to the beginning of the array
+      //   a.unshift(10);
+      //   console.log(a);
+
+      //   5. Splice - adds or removes elements from the array
+
+      //   a.splice(0, 2, ); // Adds 20 at index 2 without removing any element
+      //   console.log(a);
+
+      //   6. Slice - returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included)
+
+      //   const slicedArr = a.slice(1, 4); // Returns a new array containing elements from index 1 to index 3
+      //   console.log(slicedArr);
+
+      //   7. Concat - merges two or more arrays into a new array
+
+      //   const b = [6, 7, 8];
+
+      //   const mergedArr = a.concat(b); // Returns a new array that is the result of merging arrays a and b
+      //   console.log(mergedArr);
+
+      //   8. IndexOf - returns the first index at which a given element can be found in the array, or -1 if it is not present
+
+      //   const indexNo = a.indexOf(3);
+      //   console.log(indexNo); // Output: 2
+
+      //   if (indexNo !== -1) {
+      //     console.log("Element found at index:", indexNo);
+      //   } else {
+      //     console.log("Element not found in the array.");
+      //   }
+      //   //   9. LastIndexOf - returns the last index at which a given element can be found in the array, or -1 if it is not present
+      //   const lastIndexNo = a.lastIndexOf(3);
+      //   console.log(lastIndexNo); // Output: 6
+
+      //   10. Includes - determines whether an array includes a certain value among its entries, returning true or false as appropriate
+
+      // const a = [1, 2, 3, 4, 5, 2, 3];
+      //   const includesElement = a.includes(14);
+      //   console.log(includesElement);
+
+      //   11. Find - returns the value of the first element in the array that satisfies the provided testing function. Otherwise, undefined is returned.
+
+      // function isGreaterThanThree(element) {
+      //   return element > 3;
+      // }
+
+      //   const foundElement = a.find(isGreaterThanThree);
+      //   console.log(foundElement);
+
+      //   12. FindIndex - returns the index of the first element in the array that satisfies the provided testing function. Otherwise, -1 is returned.
+
+      //   const foundIndex = a.findIndex(isGreaterThanThree);
+      //   console.log(foundIndex);
+
+      //   console.log(a.length);
+
+      //   13. Map - creates a new array populated with the results of calling a provided function on every element in the calling array
+
+      //   const mappedArr = a.map(function (element) {
+      //     return element * 2;
+      //   });
+      //   console.log(a);
+      //   console.log(mappedArr);
+
+      //   14. ForEach - executes a provided function once for each array element
+
+      //   const cc = 3;
+
+      //   const forEachArr = a.forEach(function (element) {
+      //     console.log(element * cc);
+      //   });
+
+      //   console.log(forEachArr); // Output: undefined
+      const data = [
+        {
+          id: 1,
+          title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+          price: 109.95,
+          description:
+            "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+          category: "men's clothing",
+          image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
+          rating: {
+            rate: 3.9,
+            count: 120,
+          },
+        },
+        {
+          id: 2,
+          title: "Mens Casual Premium Slim Fit T-Shirts ",
+          price: 22.3,
+          description:
+            "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
+          category: "men's clothing",
+          image:
+            "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png",
+          rating: {
+            rate: 4.1,
+            count: 259,
+          },
+        },
+        {
+          id: 3,
+          title: "Mens Cotton Jacket",
+          price: 55.99,
+          description:
+            "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
+          category: "men's clothing",
+          image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png",
+          rating: {
+            rate: 4.7,
+            count: 500,
+          },
+        },
+        {
+          id: 4,
+          title: "Mens Casual Slim Fit",
+          price: 15.99,
+          description:
+            "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+          category: "men's clothing",
+          image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png",
+          rating: {
+            rate: 2.1,
+            count: 430,
+          },
+        },
+        {
+          id: 5,
+          title:
+            "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+          price: 695,
+          description:
+            "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+          category: "jewelery",
+          image:
+            "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_t.png",
+          rating: {
+            rate: 4.6,
+            count: 400,
+          },
+        },
+        {
+          id: 6,
+          title: "Solid Gold Petite Micropave ",
+          price: 168,
+          description:
+            "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
+          category: "jewelery",
+          image:
+            "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_t.png",
+          rating: {
+            rate: 3.9,
+            count: 70,
+          },
+        },
+        {
+          id: 7,
+          title: "White Gold Plated Princess",
+          price: 9.99,
+          description:
+            "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
+          category: "jewelery",
+          image:
+            "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_t.png",
+          rating: {
+            rate: 3,
+            count: 400,
+          },
+        },
+      ];
+
+      //   15. Filter - creates a new array with all elements that pass the test implemented by the provided function
+
+      //   const filteredArr = data.filter((product) => {
+      //     return product.rating.rate >= 4;
+      //   });
+      //   console.log(filteredArr);
+
+      // for (let i = 0; i < data.length; i++) {
+      //   console.log(data[i]);
+      // }
+
+      // const a = [1, 2, 3, 4, 5, 2, 3, 6, 7, 8];
+
+      // 16. some - tests whether at least one element in the array passes the test implemented by the provided function. It returns a Boolean value.
+
+      // const someMethod = a.some((ele) => ele > 4);
+      // console.log(someMethod);
+
+      // 19. Every - tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
+
+      // const everyMethod = a.every((ele) => ele > 3);
+      // console.log(everyMethod);
+
+      // 20. Reduce - executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
+
+      // let sum = 0;
+
+      // for (let i = 0; i < a.length; i++) {
+      //   sum += a[i];
+      // }
+
+      // 0 + 1 = 1
+      // 1 + 2 = 3
+      // 3 + 3 = 6
+      // 6 + 4 = 10
+      // 10 + 5 = 15
+
+      // const reducedArr = a.reduce((acc, cur) => acc + cur, 0);
+      // console.log(reducedArr);
+
+      // 21. Sort - sorts the elements of an array in place and returns the sorted array.
+
+      // const sortedArr = a.sort((a, b) => a - b);
+      // console.log(sortedArr);
+
+      // 22. Reverse - reverses an array in place. The first array element becomes the last, and the last array element becomes the first.
+
+      // const reversedArr = a.reverse();
+      // console.log(reversedArr);
+
+      // const a = [1, 2, 3, 4, 5, 2, 3, 6, 7, 8];
+      // 23. at - returns the element at the specified index. If the index is out of range, it returns undefined.
+
+      // // console.log(a[a.length - 1]);
+      // console.log(a.at(-1)); // Output: 8
+
+      // 24. Flat - creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+
+      // const str = "Hello World";
+      // const a = [1, 2, [3, 4], [5, 6, [7, 8]]];
+      // const flattenedArr = a.flat(2); // Flattens the array up to a depth of 2
+      // console.log(flattenedArr);
+      // a.map((ele) =>
+      //   Array.isArray(ele)
+      //     ? console.log("it's an array")
+      //     : console.log("it's not an array"),
+      // );
+      // console.log(bb);
+
+      // 25. Join - joins all elements of an array into a string and returns this string.
+
+      // const b = ["Hello", "World", "JavaScript"];
+      // const joinedStr = b.join("@"); // Joins the array elements into a string separated
+      // console.log(joinedStr); // Output: "Hello World JavaScript"
+    </script>
+  </body>
+</html>

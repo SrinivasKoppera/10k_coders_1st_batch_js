@@ -1,0 +1,107 @@
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gride</title>
+    <style>
+      .container {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 60px 1fr 150px 60px;
+        gap: 5px;
+      }
+      .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .item-1 {
+        background-color: seagreen;
+        grid-column: 1/4;
+      }
+      .item-2 {
+        background-color: lightcoral;
+        grid-row: 2/5;
+      }
+      .item-3 {
+        background-color: lightblue;
+        grid-column: 2/4;
+      }
+      .item-4 {
+        background-color: lightpink;
+        grid-column: 2/3;
+      }
+      .item-5 {
+        background-color: lightyellow;
+        grid-column: 3/4;
+      }
+      .item-6 {
+        background-color: rgb(46, 11, 159);
+        grid-column: 2/4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item-1">Item 1</div>
+      <div class="item item-2">Item 2</div>
+      <div class="item item-3">Item 3</div>
+      <div class="item item-4">Item 4</div>
+      <div class="item item-5">Item 5</div>
+      <div class="item item-6">Item 6</div>
+    </div>
+  </body>
+</html> -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+      .container {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 250px 1fr 60px;
+        grid-template-rows: 60px 60px 1fr 60px;
+        grid-template-areas:
+          "header header header"
+          "navbar navbar navbar"
+          "sidebar main-content main-content"
+          "footer footer footer";
+      }
+      .header {
+        background-color: lightgreen;
+        grid-area: header;
+      }
+      .navbar {
+        background-color: lightcoral;
+        grid-area: navbar;
+      }
+      .sidebar {
+        background-color: lightblue;
+        grid-area: sidebar;
+      }
+      .main-content {
+        background-color: lightpink;
+        grid-area: main-content;
+      }
+      .footer {
+        background-color: lightyellow;
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">HEADER</header>
+      <nav class="navbar">NAVIGATION</nav>
+      <aside class="sidebar">SIDEBAR</aside>
+      <main class="main-content">MAIN CONTENT</main>
+      <footer class="footer">FOOTER</footer>
+    </div>
+  </body>
+</html>

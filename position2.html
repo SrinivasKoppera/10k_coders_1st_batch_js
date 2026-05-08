@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+      }
+      .main-container {
+        /* background-color: lightslategrey; */
+        /* height: 80vh; */
+        padding: 20px;
+        /* position: relative; */
+      }
+      .container {
+        /* background: linear-gradient(to left, red, blue, green, yellow); */
+        background: conic-gradient(red, blue, green, yellow);
+        /* height: 50vh; */
+        /* position: relative; */
+      }
+      .item {
+        height: 100px;
+        width: 100px;
+      }
+      .item-1 {
+        background-color: lightseagreen;
+        position: absolute;
+        /* position: fixed; */
+        bottom: 0;
+        right: 0;
+        z-index: 2;
+      }
+      .item-2 {
+        background-color: lightcoral;
+        position: absolute;
+        /* position: fixed; */
+        bottom: 0;
+        right: 0;
+      }
+      .item-3 {
+        background-color: lightblue;
+      }
+      .item-4 {
+        background-color: lightyellow;
+      }
+      .sticky {
+        background-color: lightseagreen;
+        position: sticky;
+        /* top: 100px; */
+        bottom: 0;
+        opacity: 0.1;
+      }
+      .position:hover {
+        opacity: 0.5;
+        color: red;
+      }
+      .container-1 {
+        background: linear-gradient(to right, red, blue, green, yellow);
+        height: 25vh;
+      }
+      .container-2 {
+        height: 25vh;
+        background: radial-gradient(circle, red, blue, green, yellow);
+      }
+      .container-3 {
+        background: conic-gradient(red, blue, green, yellow);
+        height: 25vh;
+      }
+      .heading {
+        font-size: 10vw;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="main-container">
+      <div class="container">
+        <div class="item item-1">Item 1</div>
+        <div class="item item-2">Item 2</div>
+        <div class="item item-3">Item 3</div>
+        <div class="item item-4">Item 4</div>
+
+        <div class="item sticky">Sticky</div>
+      </div>
+    </div> -->
+    <!-- <h1 class="position">Position</h1> -->
+    <div class="container-1"></div>
+    <div class="container-2"></div>
+    <div class="container-3"></div>
+    <h1 class="heading">Heading</h1>
+  </body>
+</html>

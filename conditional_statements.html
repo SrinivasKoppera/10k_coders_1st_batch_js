@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Conditional Statements in JavaScript</h1>
+    <script>
+      // const age = 10;
+      // const isIndian = false;
+
+      //   if (isIndian) {
+      //     if (age >= 18) {
+      //       console.log("You are eligible to vote.");
+      //     } else {
+      //       console.log(
+      //         "You are not eligible to vote. because you are under 18 years old.",
+      //       );
+      //     }
+      //   } else {
+      //     console.log(
+      //       "You are not eligible to vote. because you are not an Indian citizen.",
+      //     );
+      //   }
+
+      // const day = 100;
+
+      // switch (day) {
+      //   case 1:
+      //     console.log("Monday");
+      //     break;
+      //   case 2:
+      //     console.log("Tuesday");
+      //     break;
+      //   case 3:
+      //     console.log("Wednesday");
+      //     break;
+      //   case 4:
+      //     console.log("Thursday");
+      //     break;
+      //   case 5:
+      //     console.log("Friday");
+      //     break;
+      //   case 6:
+      //     console.log("Saturday");
+      //     break;
+      //   case 7:
+      //     console.log("Sunday");
+      //     break;
+      //   default:
+      //     console.log("Invalid day");
+      //     break;
+      // }
+
+      //   if (number % 2 === 0) {
+      //     console.log("Even");
+      //   } else {
+      //     console.log("Odd");
+      //   }
+
+      // const result =
+      //   number % 2 === 0
+      //     ? number > 10
+      //       ? "Greater than 10 even number"
+      //       : "Less than or equal to 10 even number"
+      //     : "Odd";
+
+      // console.log("result:", result);
+
+      const number = 8;
+
+      // if (number % 2 === 0 || number > 10) {
+      //   console.log("This is 10");
+      // } else if (number % 2 === 0 && number > 5) {
+      //   console.log("This is 5");
+      // } else if (number % 2 === 0) {
+      //   console.log("This is 2");
+      // } else {
+      //   console.log("This is odd");
+      // }
+
+      // if (isIndian === "Indian") {
+      //   if (age >= 18) {
+      //     console.log("You are eligible to vote.");
+      //   } else {
+      //     console.log(
+      //       "You are not eligible to vote. because you are under 18 years old.",
+      //     );
+      //     if (true) {
+      //       console.log("This is a nested if statement.");
+      //     } else {
+      //       console.log("This is a nested else statement.");
+      //     }
+      //   }
+      // } else {
+      //   console.log(
+      //     "You are not eligible to vote. because you are not an Indian citizen.",
+      //   );
+      // }
+
+      // if ( age >= 18) {
+      //   console.log("This is a true condition.");
+      //   if(true) {
+      //     console.log("This is a nested true condition.");
+      //   } else {
+      //     console.log("This is a nested false condition.");
+      //   }
+      // } else {
+      //   console.log("This is a false condition.");
+      // }
+
+      let age = 10;
+      let isIndian = "Indian";
+
+      const result =
+        isIndian === "Indian"
+          ? age >= 18
+            ? "You are eligible to vote."
+            : "You are not eligible to vote. because you are under 18 years old."
+          : "You are not eligible to vote.";
+
+      console.log("result:", result);
+    </script>
+  </body>
+</html>

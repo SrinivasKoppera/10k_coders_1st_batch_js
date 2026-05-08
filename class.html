@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Specificity</title>
+    <style>
+      /* p {
+        color: red;
+      } */
+      .example {
+        color: green;
+      }
+      #unique {
+        color: blue;
+      }
+      /* div {
+        color: rgb(59, 233, 11);
+      } */
+      .container {
+        width: 300px;
+        /* height: 900px; */
+        background-color: aqua;
+      }
+      .box {
+        color: red;
+        font-size: 30px;
+        /* padding-top: 10px;
+        padding-right: 20px;
+        padding-bottom: 40px;
+        padding-left: 50px; */
+        padding: 10px 20px 40px 50px;
+        border: 1px solid black;
+        /* border-width: 20px;
+        border-style: solid;
+        border-color: black; */
+        margin: 10px;
+      }
+      button {
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: tomato;
+        font-size: 20px;
+        width: 150px;
+      }
+      input {
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+        outline: none;
+      }
+      input:focus {
+        border-color: rgb(210, 14, 33);
+        box-shadow: 0 0 5px rgb(255, 0, 0);
+      }
+      a {
+        color: blue;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      a:hover {
+        text-decoration: underline;
+        text-decoration-color: red;
+        text-decoration-style: wavy;
+      }
+      a:active {
+        color: red;
+      }
+      /* li:nth-child(3n) {
+        background-color: lightgray;
+      } */
+      /* li::first-letter {
+        color: red;
+        font-size: 30px;
+        font-weight: 900;
+      } */
+      /* li:first-child {
+        background-color: lightgray;
+      } */
+      /* p::first-line {
+        color: red;
+        font-size: 20px;
+        font-weight: bold;
+      } */
+      /* p::before {
+        content: "Before text - ";
+        color: green;
+        font-weight: bold;
+      }
+      p::after {
+        content: " - After text";
+        color: green;
+        font-weight: bold;
+      } */
+
+      /* p {
+        color: red;
+      }
+      p {
+        color: green;
+      } */
+      /* .pro p div {
+        color: red;
+      } */
+
+      span h1 {
+        color: blue;
+      }
+      .card {
+        /* background-color: lightgreen; */
+        background-image: url("data:image/jpeg;base64,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");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+        width: 600px;
+        height: 800px;
+        margin: 0 0 0 300px;
+        border: 5px solid red;
+        /* border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px; */
+        border-radius: 10px;
+        /* box-shadow: 5px 5px 10px rgb(13, 0, 255); */
+        /* box-shadow:
+          rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Global selector</li>
+      <li>Element selector</li>
+      <li>Class selector</li>
+      <li>Attribute selector</li>
+      <li>Pseudo-class selector</li>
+      <li>ID selector</li>
+      <li>Inline styles</li>
+      <li>!important</li>
+    </ul>
+    <p class="example" id="unique" style="color: chartreuse">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam,
+      recusandae.
+    </p>
+    <div class="container">
+      <p class="box">Lorem5</p>
+    </div>
+    <button>Click me</button>
+    <input type="text" placeholder="Enter your name" />
+    <a href="https://www.google.com" target="_blank">Go to Google</a>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
+      quibusdam mollitia inventore. Fugit dignissimos ad asperiores officiis,
+      earum, laudantium libero id nulla rerum repellat qui minima sint. Eum
+      rerum sunt, laborum facere consectetur eveniet expedita quis est alias
+      ratione. Deleniti commodi facere totam veniam dolorum fugit unde, dolorem
+      fuga excepturi praesentium. Nesciunt amet rerum unde dolorum. Porro magnam
+      quo atque!
+    </p>
+    <div class="pro">
+      <p>Content</p>
+    </div>
+    <div class="pro" id="unique1">
+      <p>Content</p>
+    </div>
+    <div>
+      <span>Content 1</span>
+      <h1>Heading 1</h1>
+    </div>
+
+    <div class="card">Box</div>
+  </body>
+</html>

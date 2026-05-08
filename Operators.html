@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <h1>Operators</h1>
+    <script>
+      // let name = "Alice";
+      // name[0] = "B";
+      // console.log(name);
+      // name = "Bob";
+
+      // let person = { name: "Alice", age: 30 };
+      // person.name = "Bob";
+
+      // console.log(person);
+
+      // Operators
+      // 1. Arithmetic Operators: +, -, *, /, %, **
+
+      const a = 10;
+      const b = 20;
+      const c = 5;
+
+      // console.log(a + b + c);
+      // console.log(b - a - c);
+      // console.log(a * b);
+      // console.log(b / a);
+      // console.log(a % c);
+      // console.log(a ** 2);
+
+      // 2. Assignment Operators: =, +=, -=, *=, /=, %=
+      // let x = 10;
+      // x += 5; // x = x + 5
+      // x -= 3; // x = x - 3
+      // x *= 2; // x = x * 2
+      // x /= 4; // x = x / 4
+      // x %= 3; // x = x % 3
+
+      // 3. Comparison Operators: ==, ===, !=, !==, >, <, >=, <=
+
+      let num1 = 10; // Number
+      let num2 = "10"; // String
+
+      let num3 = 10; // Number
+      let num4 = 100; // Number
+
+      // console.log(num1 == num2);
+      // console.log(num1 === num2);
+
+      // console.log("Condition 1:", num1 !== num2);
+      // console.log("Condition 2:", num3 === num4);
+
+      let age = 23;
+
+      // console.log("age <= 18:", age <= 18);
+
+      // 4. Logical Operators: &&, ||, !
+
+      const isAdult = age >= 18;
+      // console.log("isAdult:", isAdult);
+      const region = "US";
+      const hasID = true;
+
+      const result = isAdult || (region === "INDIA" && hasID);
+      // console.log("result:", result);
+
+      let isMember = false;
+      // console.log(!isMember);
+
+      // 5. Increment and Decrement Operators: ++, -- Unary operators that increase or decrease a variable's value by 1.
+
+      let x = 5;
+      let y = ++x; // Post-increment: y gets the value of x (5), then x is incremented to 6
+      console.log("x:", x);
+      console.log("y:", y);
+      // console.log("Initial x:", x++);
+
+      // 6. Ternary Operator: condition ? expressionIfTrue : expressionIfFalse ?
+
+      const isEven = 10 % 2 === 0 ? "Even" : "Odd";
+
+      // if (10 % 2 === 0) {
+      //   console.log("Even");
+      // } else {
+      //   console.log("Odd");
+      // }
+
+      // 1. false, 0, "", null, undefined, NaN
+
+      // console.log(0 && "Hello");
+
+      // console.log("num1 is:", isEven);
+
+      // if (undefined) {
+      //   console.log("This will execute because 1 is truthy");
+      // } else {
+      //   console.log("This will not execute");
+      // }
+
+      // let valume = 0;
+
+      // const result1 = valume ?? 100;
+      // console.log("result1:", result1);
+
+      // const result2 = {};
+      // console.log("result2:", result2?.name);
+
+      const asdfgh = {};
+      // console.log("asdfgh:", asdfgh);
+    </script>
+  </body>
+</html>

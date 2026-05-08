@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Color Generator</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        height: 100vh;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Background Color Generator</h1>
+    <button id="changeColorButton">Change bg color</button>
+  </body>
+  <script>
+    const colors = [
+      "red",
+      "blue",
+      "green",
+      "yellow",
+      "purple",
+      "orange",
+      "pink",
+      "cyan",
+      "magenta",
+      "lime",
+    ];
+
+    const m = 0.8274658763984765734 * 10;
+
+    const btn = document.getElementById("changeColorButton");
+    btn.addEventListener("click", () => {
+      const index = Math.floor(Math.random() * colors.length);
+      const randomColor = colors[index];
+      console.log(randomColor);
+      document.body.style.backgroundColor = randomColor;
+    });
+  </script>
+</html>
